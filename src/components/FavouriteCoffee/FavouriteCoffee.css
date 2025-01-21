@@ -1,0 +1,65 @@
+.favouriteCoffee {
+  padding-top: 100px;
+}
+
+.carusel {
+  display: flex;
+  align-items: center;
+}
+
+.caruselItems {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carusel::before,
+.carusel::after {
+  border: 1px solid var(--background-container);
+  border-radius: 100px;
+  min-width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: url(../../assets/svg/left.svg);
+}
+
+.carusel::after {
+  transform: rotate(180deg);
+}
+
+.caruselItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+
+  img {
+    max-width: 480px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+}
+
+.caruselItemContent {
+  max-width: 480px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.coffeeCost {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  text-align: center;
+  color: var(--text-dark);
+}

@@ -1,12 +1,12 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { HeroSection } from "./components/mainBaner/HeroSection";
+import { FavouriteCoffee } from "./components/FavouriteCoffee/FavouriteCoffee";
 
 function App() {
   return (
     <div className="App">
       <HeroSection />
+      <FavouriteCoffee />
     </div>
   );
 }

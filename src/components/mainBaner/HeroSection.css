@@ -12,10 +12,6 @@
   width: 100%;
   text-align: left;
   p {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
     color: var(--text-light);
     margin: 40px 0;
   }
@@ -35,11 +31,6 @@
 }
 
 h1 {
-  font-family: var(--font-family);
-  font-style: italic;
-  font-weight: 600;
-  font-size: 72px;
-  line-height: 105%;
   color: var(--text-light);
   span {
     color: var(--text-accent);
