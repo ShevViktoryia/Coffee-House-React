@@ -1,0 +1,42 @@
+.about {
+  padding-top: 100px;
+  h2 {
+    text-align: justify;
+  }
+}
+
+.aboutContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.imgAbout {
+  border-radius: 20px;
+  min-width: 660px;
+}
+
+.imgAbout1 {
+  background: url(../../assets/img/about-1.png) center/cover no-repeat;
+  height: 590px;
+  order: 1;
+}
+
+.imgAbout2 {
+  background: url(../../assets/img/about-2.png) center/cover no-repeat;
+  height: 430px;
+  order: 3;
+}
+
+.imgAbout3 {
+  background: url(../../assets/img/about-3.png) center/cover no-repeat;
+  height: 430px;
+  order: 2;
+}
+.imgAbout4 {
+  background: url(../../assets/img/about-4.png) center/cover no-repeat;
+  height: 590px;
+  order: 4;
+  position: relative;
+  top: -160px;
+}

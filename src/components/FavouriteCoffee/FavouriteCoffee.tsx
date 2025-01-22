@@ -48,6 +48,11 @@ export const FavouriteCoffee = () => {
               </div>
             </div>
           </div>
+          <ul className="carusel_dots">
+            <li className="carusel_dot"></li>
+            <li className="carusel_dot"></li>
+            <li className="carusel_dot"></li>
+          </ul>
         </div>
       </div>
     </section>
