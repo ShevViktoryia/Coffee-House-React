@@ -3,6 +3,7 @@ import { HeroSection } from "./components/mainBaner/HeroSection";
 import { FavouriteCoffee } from "./components/FavouriteCoffee/FavouriteCoffee";
 import { About } from "./components/About/About";
 import { MobileApp } from "./components/MobileApp/MobileApp";
+import { Footer } from "./layout/Footer/Footer";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <FavouriteCoffee />
       <About />
       <MobileApp />
+      <Footer />
     </div>
   );
 }

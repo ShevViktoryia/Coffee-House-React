@@ -1,0 +1,15 @@
+.footer_content {
+  border-radius: 40px;
+  padding: 100px;
+  min-height: 450px;
+  background: var(--background-container);
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.footer_left,
+.footer_right {
+  width: 50%;
+  list-style: none;
+}
