@@ -1,4 +1,7 @@
 import "./Footer.css";
+import twitter from "../../assets/svg/twitter.svg";
+import instagram from "../../assets/svg/instagram.svg";
+import facebook from "../../assets/svg/facebook.svg";
 
 export const Footer = () => {
   return (
@@ -10,14 +13,20 @@ export const Footer = () => {
               Sip, Savor, Smile. <span> It’s coffee time!</span>
             </h2>
             <ul className="socials">
-              <li></li>
-              <li></li>
-              <li></li>
+              <li>
+                <img src={twitter} alt="twitter" />
+              </li>
+              <li>
+                <img src={instagram} alt="instagram" />
+              </li>
+              <li>
+                <img src={facebook} alt="facebook" />
+              </li>
             </ul>
           </div>
           <div className="footer_right">
             <h3>Contact us</h3>
-            <ul>
+            <ul className="contacts">
               <li>8558 Green Rd., LA</li>
               <li>+1 (603) 555-0123</li>
               <li>Mon-Sat: 9:00 AM – 23:00 PM</li>
