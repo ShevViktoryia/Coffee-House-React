@@ -1,0 +1,14 @@
+.burgerMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: 0.2s;
+  span {
+    font-weight: 600;
+  }
+  &:hover {
+    cursor: pointer;
+    border-bottom: 2px solid var(--text-dark);
+  }
+}

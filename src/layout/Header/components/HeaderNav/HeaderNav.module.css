@@ -1,0 +1,17 @@
+.navigationItems {
+  display: flex;
+  gap: 40px;
+}
+
+.navigationItem a {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 0.15;
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: 0.2s;
+  &:hover {
+    border-bottom: 2px solid var(--text-dark);
+  }
+}
