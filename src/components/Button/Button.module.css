@@ -3,7 +3,34 @@
   border-radius: 100px;
   padding: 8px 16px 8px 8px;
   transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   &:hover {
     background-color: var(--background-container);
+    cursor: pointer;
+    span {
+      background-color: var(--text-light);
+      color: var(--text-light);
+    }
+  }
+  span {
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--border-light);
+    transition: 0.3s;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--text-dark);
+  }
+  img {
+    max-width: 16px;
   }
 }

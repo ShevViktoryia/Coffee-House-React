@@ -1,20 +1,15 @@
 import "./App.css";
-import { HeroSection } from "./components/mainBaner/HeroSection";
-import { FavouriteCoffee } from "./components/FavouriteCoffee/FavouriteCoffee";
-import { About } from "./components/About/About";
-import { MobileApp } from "./components/MobileApp/MobileApp";
-import { Footer } from "./layout/Footer/Footer";
-import { Header } from "./layout/Header/Header";
+import { Route, Routes } from "react-router-dom";
+import MainPage from "./pages/MainPage/MainPage";
+import { CoffeePage } from "./pages/Coffee-page/CoffeePage";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <HeroSection />
-      <FavouriteCoffee />
-      <About />
-      <MobileApp />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/coffee" element={<CoffeePage />} />
+      </Routes>
     </div>
   );
 }

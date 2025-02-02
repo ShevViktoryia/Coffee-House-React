@@ -1,0 +1,11 @@
+.coffeeMenu {
+  h1 {
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 125%;
+    text-align: center;
+    color: var(--text-dark);
+    max-width: 800px;
+    margin: 20px auto 40px;
+  }
+}

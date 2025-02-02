@@ -5,7 +5,7 @@ interface Props {
   imgLink: string;
 }
 
-export const Buttom = ({ text, imgLink }: Props) => {
+export const Button = ({ text, imgLink }: Props) => {
   return (
     <button className={s.filterBtn}>
       <span className={s.filterIcon}>
