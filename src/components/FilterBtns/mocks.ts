@@ -2,18 +2,20 @@ import coffeeCup from "../../assets/img/coffee.png";
 import tea from "../../assets/img/tea🫖.png";
 import cake from "../../assets/img/cake.png";
 
+const filters: ("coffee" | "tea" | "dessert")[] = ["coffee", "tea", "dessert"];
+
 const FILTERS = [
   {
     img: coffeeCup,
-    text: "Coffee",
+    text: filters[0],
   },
   {
     img: tea,
-    text: "Tea",
+    text: filters[1],
   },
   {
     img: cake,
-    text: "Dessert",
+    text: filters[2],
   },
 ];
 

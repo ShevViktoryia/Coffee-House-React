@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
   gap: 8px;
   &:hover {
     background-color: var(--background-container);
