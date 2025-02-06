@@ -4,7 +4,7 @@ import play from "../../assets/svg/play.svg";
 
 export const MobileApp = () => {
   return (
-    <section className="mobile-app">
+    <section id="mobile-app" className="mobile-app">
       <div className="container">
         <div className="mobile-app-content">
           <div className="mobile-text">

@@ -2,7 +2,7 @@ import "./About.css";
 
 export function About() {
   return (
-    <section className="about">
+    <section id="about" className="about">
       <div className="container">
         <h2>
           Resource is <span>the perfect and cozy place</span> where you can

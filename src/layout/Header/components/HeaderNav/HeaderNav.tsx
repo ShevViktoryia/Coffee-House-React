@@ -9,13 +9,13 @@ export const HeaderNav = () => {
           <Link to="/menu">Favorite coffee</Link>
         </li>
         <li className={s.navigationItem}>
-          <a href="#">About</a>
+          <a href={"#about"}>About</a>
         </li>
         <li className={s.navigationItem}>
-          <a href="#">Mobile app</a>
+          <a href={"#mobile-app"}>Mobile app</a>
         </li>
         <li className={s.navigationItem}>
-          <a href="#">Contact us</a>
+          <a href={"#contacts"}>Contact us</a>
         </li>
       </ul>
     </nav>
