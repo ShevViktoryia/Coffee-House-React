@@ -1,4 +1,4 @@
-const filters: number[] = [200, 300, 400];
+const filters: string[] = ["200", "300", "400"];
 
 export const SIZE_FILTERS = [
   {

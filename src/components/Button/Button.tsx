@@ -1,10 +1,10 @@
 import s from "./Button.module.css";
 
 interface Props {
-  text: "coffee" | "tea" | "dessert";
+  text: string;
   imgLink?: string;
-  size?: number;
-  onClick: (value: "coffee" | "tea" | "dessert") => void;
+  size?: string;
+  onClick: (value: string) => void;
 }
 
 export const Button = ({ text, imgLink, size, onClick }: Props) => {

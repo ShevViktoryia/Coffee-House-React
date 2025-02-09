@@ -3,7 +3,7 @@ import FILTERS from "./mocks";
 import s from "./FilterBtns.module.css";
 
 interface FilterBtnsProps {
-  changeMode: (e: "coffee" | "tea" | "dessert") => void;
+  changeMode: (e: string) => void;
 }
 
 export const FilterBtns = ({ changeMode }: FilterBtnsProps) => {

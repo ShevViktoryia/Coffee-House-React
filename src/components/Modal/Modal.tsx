@@ -1,17 +1,20 @@
-import { title } from "process";
+import { useRef } from "react";
 
-interface ModalProps {
+export interface ProductProps {
+  id: string;
   img: string;
   title: string;
   description: string;
   cost: number;
 }
 
-export const Modal = (props: ModalProps) => {
+export const Modal = (props: ProductProps) => {
+  const modalRef = useRef(null);
   return (
-    <div>
+    <div ref={modalRef}>
       <h3> {props.title} </h3>
       <p> {props.description} </p>
     </div>
   );
 };
+
