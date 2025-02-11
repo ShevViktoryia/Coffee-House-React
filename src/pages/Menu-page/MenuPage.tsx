@@ -5,7 +5,7 @@ import { MenuList } from "./components/MenuList/MenuList";
 import { Modal } from "../../components/Modal/Modal";
 
 export const MenuPage = () => {
-  const [mode, setMode] = useState<"coffee" | "tea" | "dessert">("coffee");
+  const [mode, setMode] = useState<string>("coffee");
   const [isOpenModal, setIsOpenModal] = useState(false);
 
   const toggleModal = () => setIsOpenModal(!isOpenModal);

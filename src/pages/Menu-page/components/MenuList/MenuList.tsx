@@ -2,7 +2,7 @@ import { MENU_DATA } from "../../mocks";
 import s from "./MenuList.module.css";
 
 interface MenuListProps {
-  mode: "coffee" | "tea" | "dessert";
+  mode: string;
 }
 
 export const MenuList = ({ mode }: MenuListProps) => {
@@ -11,7 +11,12 @@ export const MenuList = ({ mode }: MenuListProps) => {
       <div className="container">
         <div className={s.menuList}>
           {MENU_DATA.map((menu) => {
-            const menuItems = menu[mode];
+            const menuItems =
+              mode === "coffee"
+                ? menu.coffee
+                : mode === "tea"
+                ? menu.tea
+                : menu.dessert;
             if (!menuItems) return null;
             return menuItems.map((item) => (
               <div key={item.id} className={s.menuCard}>
