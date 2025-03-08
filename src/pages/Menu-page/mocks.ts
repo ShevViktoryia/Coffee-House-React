@@ -19,6 +19,14 @@ import dessert6 from "../../assets/img/dessert-6.png";
 import dessert7 from "../../assets/img/dessert-7.png";
 import dessert8 from "../../assets/img/dessert-8.png";
 
+export type Product = {
+  id: string;
+  img: string;
+  title: string;
+  description: string;
+  cost: string;
+};
+
 export const MENU_DATA = [
   {
     coffee: [

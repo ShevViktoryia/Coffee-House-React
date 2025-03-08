@@ -2,13 +2,9 @@ import { useState } from "react";
 import { FilterBtns } from "../../components/FilterBtns/FilterBtns";
 import s from "./MenuPage.module.css";
 import { MenuList } from "./components/MenuList/MenuList";
-import { Modal } from "../../components/Modal/Modal";
 
 export const MenuPage = () => {
   const [mode, setMode] = useState<string>("coffee");
-  const [isOpenModal, setIsOpenModal] = useState(false);
-
-  const toggleModal = () => setIsOpenModal(!isOpenModal);
 
   return (
     <section className={s.menu}>

@@ -35,3 +35,12 @@
     max-width: 16px;
   }
 }
+
+.activeBtn {
+  background-color: var(--background-container);
+  cursor: pointer;
+  span {
+    background-color: var(--text-light);
+    color: var(--text-light);
+  }
+}

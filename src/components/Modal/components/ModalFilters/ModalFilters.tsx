@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "../../../Button/Button";
 import SIZE_FILTERS from "./mocks";
 
@@ -6,6 +7,9 @@ interface ModalFiltersProps {
 }
 
 export const ModalFilters = ({ changeMode }: ModalFiltersProps) => {
+  const [activeButton, setActiveButton] = useState<string>(
+    SIZE_FILTERS[0].text
+  );
   return (
     <div>
       <p>Size</p>
@@ -14,6 +18,8 @@ export const ModalFilters = ({ changeMode }: ModalFiltersProps) => {
           key={`size${ind}`}
           size={size.size}
           text={size.text}
+          isActive={activeButton === size.text}
+          setIsActive={setActiveButton}
           onClick={changeMode}
         />
       ))}
