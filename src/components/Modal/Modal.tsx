@@ -1,7 +1,8 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import ReactDOM from "react-dom";
 import { Product } from "../../pages/Menu-page/mocks";
 import s from "./Modal.module.css";
+import { ModalFilters } from "./components/ModalFilters/ModalFilters";
 
 export interface ProductProps {
   isOpen: boolean;
@@ -10,6 +11,7 @@ export interface ProductProps {
 }
 
 export const Modal = ({ isOpen, product, onClose }: ProductProps) => {
+  const [mode, setMode] = useState("");
   useEffect(() => {
     if (isOpen) document.body.style.overflow = "hidden";
     else document.body.style.overflow = "auto";
@@ -28,6 +30,7 @@ export const Modal = ({ isOpen, product, onClose }: ProductProps) => {
         <div className={s["text-content"]}>
           <h3> {product.title} </h3>
           <p> {product.description} </p>
+          <ModalFilters changeMode={setMode} />
         </div>
       </div>
     </div>,

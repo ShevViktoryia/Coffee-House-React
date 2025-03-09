@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "../../../Button/Button";
 import SIZE_FILTERS from "./mocks";
+import s from "./ModalFilters.module.css";
 
 interface ModalFiltersProps {
   changeMode: (e: string) => void;
@@ -13,16 +14,18 @@ export const ModalFilters = ({ changeMode }: ModalFiltersProps) => {
   return (
     <div>
       <p>Size</p>
-      {SIZE_FILTERS.map((size, ind) => (
-        <Button
-          key={`size${ind}`}
-          size={size.size}
-          text={size.text}
-          isActive={activeButton === size.text}
-          setIsActive={setActiveButton}
-          onClick={changeMode}
-        />
-      ))}
+      <div className={s.btnsContainer}>
+        {SIZE_FILTERS.map((size, ind) => (
+          <Button
+            key={`size${ind}`}
+            size={size.size}
+            text={size.text}
+            isActive={activeButton === size.text}
+            setIsActive={setActiveButton}
+            onClick={changeMode}
+          />
+        ))}
+      </div>
     </div>
   );
 };
