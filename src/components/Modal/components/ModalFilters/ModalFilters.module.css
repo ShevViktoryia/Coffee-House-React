@@ -1,5 +1,21 @@
+.filterTitle {
+  margin-top: 20px;
+}
 .btnsContainer {
   display: flex;
   gap: 8px;
-  margin-top: 20px;
+  margin-top: 8px;
+  span {
+    color: var(--text-dark);
+  }
+  .modalBtn {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    &:hover {
+      background-color: var(--background-container);
+      cursor: pointer;
+      color: var(--text-light);
+    }
+  }
 }

@@ -6,6 +6,7 @@ interface Props {
   imgLink?: string;
   size?: string;
   isActive: boolean;
+  className?: string;
   setIsActive: (str: string) => void;
   onClick: (value: string) => void;
 }
@@ -15,6 +16,7 @@ export const Button = ({
   imgLink,
   size,
   isActive,
+  className,
   setIsActive,
   onClick,
 }: Props) => {
@@ -24,7 +26,10 @@ export const Button = ({
   };
   return (
     <button
-      className={clsx(s.filterBtn, isActive && s.activeBtn)}
+      className={clsx(
+        clsx(s.filterBtn, className),
+        isActive && clsx(s.activeBtn, className)
+      )}
       onClick={handleClick}
     >
       <span className={s.filterIcon}>

@@ -1,18 +1,37 @@
-const filters: string[] = ["200", "300", "400"];
+const size_filters: string[] = ["200 ml", "300 ml", "400 ml"];
 
 export const SIZE_FILTERS = [
   {
     size: "S",
-    text: filters[0],
+    text: size_filters[0],
   },
   {
     size: "M",
-    text: filters[1],
+    text: size_filters[1],
   },
   {
     size: "L",
-    text: filters[2],
+    text: size_filters[2],
   },
 ];
 
-export default SIZE_FILTERS;
+const additives_filter: string[] = ["Sugar", "Cinnamon", "Syrup"];
+export const ADDITIVES_FILTER = [
+  {
+    size: "1",
+    text: additives_filter[0],
+  },
+  {
+    size: "2",
+    text: additives_filter[1],
+  },
+  {
+    size: "3",
+    text: additives_filter[2],
+  },
+];
+
+export const dataFilters = [
+  { title: "Size", items: SIZE_FILTERS },
+  { title: "Additives", items: ADDITIVES_FILTER },
+];
