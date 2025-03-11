@@ -23,31 +23,29 @@ export const MenuList = ({ mode }: MenuListProps) => {
                 : menu.dessert;
             if (!menuItems) return null;
             return menuItems.map((item) => (
-              <>
-                <div
-                  key={item.id}
-                  className={s.menuCard}
-                  onClick={() => setSelectedProduct(item)}
-                >
-                  <img src={item.img} alt={item.title} />
-                  <div className={s.description}>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                    <p>${item.cost}</p>
-                  </div>
+              <div
+                key={item.id}
+                className={s.menuCard}
+                onClick={() => setSelectedProduct(item)}
+              >
+                <img src={item.img} alt={item.title} />
+                <div className={s.description}>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                  <p>${item.cost}</p>
                 </div>
-                {selectedProduct && (
-                  <Modal
-                    isOpen={!!selectedProduct}
-                    product={item}
-                    onClose={() => setSelectedProduct(null)}
-                  />
-                )}
-              </>
+              </div>
             ));
           })}
         </div>
       </div>
+      {selectedProduct && (
+        <Modal
+          isOpen={!!selectedProduct}
+          product={selectedProduct}
+          onClose={() => setSelectedProduct(null)}
+        />
+      )}
     </section>
   );
 };

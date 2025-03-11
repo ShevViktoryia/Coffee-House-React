@@ -4,6 +4,7 @@ import { Product } from "../../pages/Menu-page/mocks";
 import s from "./Modal.module.css";
 import { ModalFilters } from "./components/ModalFilters/ModalFilters";
 import { TotalSection } from "./components/TotalSection/TotalSection";
+import { Button } from "../Button/Button";
 
 export interface ProductProps {
   isOpen: boolean;
@@ -33,6 +34,7 @@ export const Modal = ({ isOpen, product, onClose }: ProductProps) => {
           <p> {product.description} </p>
           <ModalFilters changeMode={setMode} />
           <TotalSection price={product.cost} />
+          <Button text="Close" onClick={() => !isOpen} />
         </div>
       </div>
     </div>,

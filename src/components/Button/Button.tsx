@@ -5,9 +5,9 @@ interface Props {
   text: string;
   imgLink?: string;
   size?: string;
-  isActive: boolean;
+  isActive?: boolean;
   className?: string;
-  setIsActive: (str: string) => void;
+  setIsActive?: (str: string) => void;
   onClick: (value: string) => void;
 }
 
@@ -21,7 +21,7 @@ export const Button = ({
   onClick,
 }: Props) => {
   const handleClick = () => {
-    setIsActive(text);
+    setIsActive?.(text);
     onClick(text);
   };
   return (
@@ -32,9 +32,11 @@ export const Button = ({
       )}
       onClick={handleClick}
     >
-      <span className={s.filterIcon}>
-        {imgLink ? <img src={imgLink} alt="icon" /> : size}
-      </span>
+      {imgLink && (
+        <span className={s.filterIcon}>
+          {imgLink ? <img src={imgLink} alt="icon" /> : size}
+        </span>
+      )}
       {text}
     </button>
   );
