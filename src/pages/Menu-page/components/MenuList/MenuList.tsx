@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { MENU_DATA, Product } from "../../mocks";
 import s from "./MenuList.module.css";
 import { Modal } from "../../../../components/Modal/Modal";
@@ -9,7 +9,7 @@ interface MenuListProps {
 
 export const MenuList = ({ mode }: MenuListProps) => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-
+  const closeModal = useCallback(() => setSelectedProduct(null), []);
   return (
     <section className={s.menuSection}>
       <div className="container">
@@ -43,7 +43,7 @@ export const MenuList = ({ mode }: MenuListProps) => {
         <Modal
           isOpen={!!selectedProduct}
           product={selectedProduct}
-          onClose={() => setSelectedProduct(null)}
+          onClose={closeModal}
         />
       )}
     </section>

@@ -34,7 +34,7 @@ export const Modal = ({ isOpen, product, onClose }: ProductProps) => {
           <p> {product.description} </p>
           <ModalFilters changeMode={setMode} />
           <TotalSection price={product.cost} />
-          <Button text="Close" onClick={() => !isOpen} />
+          <Button className={s.closeBtn} text="Close" onClick={onClose} />
         </div>
       </div>
     </div>,
